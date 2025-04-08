@@ -79,12 +79,8 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# Ajuste para evitar dependência de ENGINE no Django
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.dummy",
-    }
-}
+# Removendo djongo e configurando pymongo diretamente
+DATABASES = {}
 
 # Configuração do MongoDB com pymongo
 MONGO_CLIENT_SETTINGS = {
